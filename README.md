@@ -12,3 +12,8 @@ Step 2 : Insert
 
 
 Step 3 - Get Min and Get Max
+
+step 4 -- search for a value
+
+Then we wrote some problems to find kth largest, smallest value
+maximum product among the subtrees
