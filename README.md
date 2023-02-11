@@ -9,4 +9,6 @@ Our implementation won’t use a Tree class, but instead just a Node class. Bina
 First, we create a constructor:
 
 Step 2 : Insert 
+
+
 Step 3 - Get Min and Get Max
