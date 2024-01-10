@@ -22,23 +22,23 @@ class BSTNode:
             else:    
                 self.right=BSTNode(data)
     def delete(self,data):
-        if self==None:
-            return self
+        
         if data<self.data:
-            self.data=self.left.delete(data)
-            
+            if self.left:
+                self.left.delete(data)
         elif data>self.data:
-            self.data=self.left.delete(data)
-            
-        elif self.left==None:
-            return self.right
-        elif self.right==None:
-            return self.left
+            if self.right:
+                self.right.delete(data)
         else:
-            itr=self.right.getMin()
-            self.data=itr
-            self.right=self.right.delete(itr)
-        return self.data
+            if self.left is None:
+                return self.right
+            if self.right is None:
+                return self.right
+            
+            current=self.right.getMin()
+            self.data=current
+            self.right=self.right.delete(current)
+        return self
     def search(self,data):
         if data==self.data:
             return True
